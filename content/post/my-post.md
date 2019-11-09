@@ -49,9 +49,9 @@ sequenceDiagrams:
 
 ### 三级标题
 
-## 语法介绍
+# 语法介绍
 
-### 标题
+## 标题
 
 效果见上方
 
@@ -63,7 +63,7 @@ sequenceDiagrams:
 ### 三级标题
 ```
 
-### 段落换行
+## 段落换行
 
 ```markdown
 第一段
@@ -84,7 +84,7 @@ sequenceDiagrams:
 换行（上一行末尾有两个空格）
 
 
-### 文字样式
+## 文字样式
 
 ```markdown
 **加粗** *斜体* ***加粗和斜体***
@@ -96,7 +96,7 @@ sequenceDiagrams:
 
 ~~删除线~~ ~~**加粗删除**~~ ~~*斜体删除*~~
 
-### 链接
+## 链接
 
 ```markdown
 [ZHB's Blog](http://blog.gkzhb.tk)
@@ -108,7 +108,7 @@ sequenceDiagrams:
 
 [相对链接](/)
 
-### 图片
+## 图片
 
 ```markdown
 ![百(la)度(ji)](https://www.baidu.com/img/bd_logo1.png 文字)
@@ -116,9 +116,9 @@ sequenceDiagrams:
 
 ![百(la)度(ji)](https://www.baidu.com/img/bd_logo1.png)
 
-### 列表
+## 列表
 
-#### 无序列表
+### 无序列表
 
 ```markdown
 * 列表项1
@@ -130,7 +130,7 @@ sequenceDiagrams:
 * 列表项2
 * 列表项3
 
-#### 有序列表
+### 有序列表
 
 ```
 1. 第一项
@@ -154,7 +154,7 @@ sequenceDiagrams:
 1. 第二项
 1. 第三项
 
-#### 待办事项
+### 待办事项
 
 ```markdown
 * [ ] 未完成
@@ -164,7 +164,7 @@ sequenceDiagrams:
 * [ ] 未完成
 * [x] 已完成
 
-#### 多级混合列表
+### 多级混合列表
 
 ```markdown
 * aaa
@@ -198,7 +198,7 @@ sequenceDiagrams:
 		+ e
 	* ee
 
-### 代码块
+## 代码块
 
 行内代码：`inline code`
 
@@ -207,7 +207,7 @@ $ echo hello world
 hello world
 ```
 
-### 表格
+## 表格
 
 ```markdown
 表头|表头|表头|表头
@@ -225,7 +225,7 @@ xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
 xxxxxxx|aaaaaaaaaa|bbbbbbbb|cccccccc
 居中|右对齐|无|左对齐
 
-### 数学公式
+## 数学公式
 
 使用MathJax渲染
 
