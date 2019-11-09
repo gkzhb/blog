@@ -2,7 +2,7 @@
 title: "第一篇 Hugo 文章"
 date: 2019-11-08T22:26:28+08:00
 lastmod: 2019-11-08T22:26:28+08:00
-draft: true
+draft: false
 keywords: []
 description: ""
 tags: []
