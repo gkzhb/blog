@@ -124,7 +124,7 @@ This is my second slide.
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 ```
 
-这时可以打开 http://localhost:1313/ 即可实时预览，当文件有改动时，网页会自动刷新。
+这时可以打开 `http://localhost:1313/` 即可实时预览，当文件有改动时，网页会自动刷新。
 
 ## 网站结构
 
@@ -140,7 +140,7 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
     - conclusion.md # 添加到 ted talk PPT 后
 ```
 
-在这个结构中，最后会生成两个 PPT，一个是根目录的 PPT，一个是 `/ted-talk` 路径下的 PPT。在文件夹中的补充 Markdown 文件会按照其中配置头部信息中的 `weight` 属性排序。如：
+在这个目录结构中，最后会生成两个 PPT，一个是根目录的 PPT，一个是 `/ted-talk` 路径下的 PPT。在文件夹中的补充 Markdown 文件会按照其中配置头部信息中的 `weight` 属性排序。如：
 
 ```markdown
 +++
@@ -214,6 +214,9 @@ reveal.js 提供了纵向的导航方式，可以用来将一个章节部份的�
 
 `id` 属性用来链接引用。如 `[Try the link](#custom-slide)` 会生成一个链接到对应 `id` 的 Slide 的链接。
 
+#### note
+
+使用 `{{%/* note */%}}` 可以添加演讲者注释信息，在网页端按 `s` 键可以打开演讲者界面。
 
 ## 添加 reveal.js 插件
 
@@ -232,6 +235,19 @@ slide_number = true
 在 `layouts/partials/<path-to-slide>/reveal-hugo` 目录下添加 `head.html` 文件，加上引用所需 css 的 html 代码。
 
 教程参考 [Plugin Example](https://themes.gohugo.io/theme/reveal-hugo/plugin-example)，对应 css 配置见 [reveal-hugo/head.html at master · dzello/reveal-hugo](https://github.com/dzello/reveal-hugo/blob/master/exampleSite/layouts/partials/plugin-example/reveal-hugo/head.html)。
+
+## 小功能
+
+### 快捷键
+
+* 上下左右控制 Slide 移动方向
+* `s` 进入演讲者模式
+* `o` 进入概览模式
+* `f` 进入全屏模式
+
+### 导出为 PDF
+
+reveal.js 支持用 Chrome 浏览器导出为 PDF 文件，只需要在原来的网页地址后加上 `?print-pdf`，如 `https://gkzhb.gitee.io/slides/?print-pdf`，然后使用 Chrome 的打印功能即可导出为 PDF。
 
 ## 更多
 
