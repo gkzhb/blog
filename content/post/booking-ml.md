@@ -7,7 +7,7 @@ keywords: []
 description: ""
 tags: ["机器学习"]
 categories: ["论文"]
-author: ""
+author: "zhb"
 
 # You can also close(false) or open(true) something for this content.  # P.S. comment can only be closed
 comment: false
