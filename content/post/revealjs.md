@@ -198,7 +198,17 @@ reveal.js 提供了纵向的导航方式，可以用来将一个章节部份的�
 
 可以实现增量显示，即开始不显示，每次操作顺次出现。
 
-指定次序使用 `{{%/* frag c=1 */%}} One {{%/* /frag */%}}` 通过 `c` 属性确定，未标定则最后出现。
+单行显示 `{{%/* frag c="One" */%}}` 通过 `c` 属性确定内容，同上面的第一行。
+
+另外可以修改显示的顺序，不过我目前没在主题的文档中找到 Shortcode 的说明，不过应该可以自定义一个 Hugo Shortcode 来实现。这里就先写 html：
+
+```html
+<span class='fragment' data-fragment-index=2>hello1</span>
+<span class='fragment' data-fragment-index=2>hello2</span>
+<span class='fragment' data-fragment-index=1>hello3</span>
+```
+
+`data-fragment-index` 属性指定显示顺序，从小到大依次显示，数值一样则同时显示。对于行内文字用 `<span>` 包裹，而段(`block`)内容（如代码块）用 `<div>` 包裹。
 
 #### Slide
 
