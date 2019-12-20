@@ -200,15 +200,13 @@ reveal.js 提供了纵向的导航方式，可以用来将一个章节部份的�
 
 单行显示 `{{%/* frag c="One" */%}}` 通过 `c` 属性确定内容，同上面的第一行。
 
-另外可以修改显示的顺序，不过我目前没在主题的文档中找到 Shortcode 的说明，不过应该可以自定义一个 Hugo Shortcode 来实现。这里就先写 html：
+另外可以添加 `index` 属性来指定显示的顺序，如 `{{%/* fragment index=2 */%}} One {{%/* /fragment */%}}`。生成的 html 如下：
 
 ```html
-<span class='fragment' data-fragment-index=2>hello1</span>
-<span class='fragment' data-fragment-index=2>hello2</span>
-<span class='fragment' data-fragment-index=1>hello3</span>
+<span class='fragment' data-fragment-index=2> One </span>
 ```
 
-`data-fragment-index` 属性指定显示顺序，从小到大依次显示，数值一样则同时显示。对于行内文字用 `<span>` 包裹，而段(`block`)内容（如代码块）用 `<div>` 包裹。
+`data-fragment-index` 属性指定显示顺序，从小到大依次显示，数值一样则同时显示。对于行内文字用 `<span>` 包裹，而段(`block`)内容（如代码块、图片）用 `<div>` 包裹。主题默认没有提供 `<div>` 类型的 shortcode，可以自己将 `themes/reveal-hugo/layouts/shortcodes/fragment.html` 复制到 `layouts/shortcodes/bfragment.html` 文件中，将其中的两个 `span` 换成 `div`。之后用 `{{%/* bfragment */%}}` 可以使段内容增量显示，而且同样可以用 `index` 指定显示顺序。
 
 #### Slide
 
