@@ -48,6 +48,9 @@ Anki 是一个用于记忆的软件，客户端同时支持电脑端和移动端
 * 同步服务器没有 AnkiWeb 的网页端访问支持
 * ankisyncd 服务器支持 PC 端 Anki 版本 **2.1.1 - 2.1.11**，但是 2.1.9 版本不支持
 * PC 端最新版 Anki 因为更新了同步协议，而目前开源同步服务端并没有更新到新的协议，所以要使用自建服务器，请务必**使用老版 Anki**
+* 另 AnkiDroid 似乎在 2.10 版本之后会要求使用 HTTPS 连接同步服务器，导致 HTTP 服务器无法正常同步
+
+> 想使用最新版 PC 端 Anki 可参考 [Updating anki-bundled past 2.1.16+ · Issue #67 · tsudoko/anki-sync-server](https://github.com/tsudoko/anki-sync-server/issues/67)
 
 <!--more-->
 
