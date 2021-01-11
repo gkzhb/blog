@@ -92,7 +92,7 @@ rsync -a -x / /mnt/ssd
 
 关于 `-x` 参数的具体解释说明可以查看这个链接：[backup - Meaning of Crossing filesystem boundaries, --one-file-system, etc - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/107113/meaning-of-crossing-filesystem-boundaries-one-file-system-etc)
 
-## 修改 /etc/fstab
+## 修改 /etc/fstab 和 /etc/default/grub
 
 在 `/etc/fstab` 文件中（挂载分区中对应 `/mnt/ssd/etc/fstab`），记录了各个路径点对应的挂载分区，一般使用 UUID 识别某个分区。
 
@@ -108,6 +108,8 @@ Linux Swap|`swap`
 ext4 分区|`/`
 
 只要将**新分区**中的 fstab 文件中 `UUID=` 后面的 UUID 进行替换即可，挂载点不用修改。
+
+另外，在 `/etc/default/grub` 文件中，需要修改 `GRUB_CMDLINE_LINUX_DEFAULT` 的值：`resume=UUID=xxx` UUID 的值改为新 swap 分区的 UUID，之后更新 GRUB 引导（继续后面的步骤）。
 
 ## 安装 GRUB 引导
 
@@ -198,3 +200,4 @@ efibootmgr -b 2 -B
 * [backup - Moving entire Linux installation to another drive - Ask Ubuntu](https://askubuntu.com/questions/741723/moving-entire-linux-installation-to-another-drive)
 * [dual boot - How can I repair grub? (How to get Ubuntu back after installing Windows?) - Ask Ubuntu](https://askubuntu.com/questions/88384/how-can-i-repair-grub-how-to-get-ubuntu-back-after-installing-windows/88432#88432)
 * [Efibootmgr - Gentoo Wiki](https://wiki.gentoo.org/wiki/Efibootmgr)
+* [linux - How do I fix Manjaro error hibernation device not found on boot? - Super User](https://superuser.com/questions/1014212/how-do-i-fix-manjaro-error-hibernation-device-not-found-on-boot)
