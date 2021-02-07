@@ -19,7 +19,7 @@ hiddenFromHomePage: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: false
 reward: false
-mathjax: true
+mathjax: false
 mathjaxEnableSingleDollar: true
 mathjaxEnableAutoNumber: false
 
