@@ -6,7 +6,7 @@ draft: false
 keywords: []
 description: ""
 tags: ["ml", "nlp"]
-categories: ["随想"]
+categories: ["瞎扯"]
 author: ""
 
 # You can also close(false) or open(true) something for this content.
